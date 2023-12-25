@@ -5,13 +5,12 @@
 #include <Arduino.h>
 
 #include <Wire.h>
-#include <LiquidCrystal_I2C.h>
+// #include <LiquidCrystal_I2C.h>
 
 /***************************************************************************/
 
 namespace I2C_STUFF
 {
-
   void i2c_scan()
   {
     int nDevices = 0;
