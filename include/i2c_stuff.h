@@ -2,9 +2,10 @@
 #ifndef i2c_stuff_H
 #define i2c_stuff_H
 
-#include "globals.h"
+#include <Arduino.h>
 
-using namespace Globals;
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
 
 /***************************************************************************/
 
