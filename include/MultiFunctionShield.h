@@ -12,14 +12,19 @@ const uint8_t LED_1_PIN = 13;
 const uint8_t LED_2_PIN = 12;
 const uint8_t LED_3_PIN = 11;
 const uint8_t LED_4_PIN = 10;
+
 const uint8_t POT_PIN = 0;
+
 const uint8_t BUZZER_PIN = 3;
+
 const uint8_t BUTTON_1_PIN = A1;
 const uint8_t BUTTON_2_PIN = A2;
 const uint8_t BUTTON_3_PIN = A3;
+
 const uint8_t LATCH_PIN = 4;
 const uint8_t CLK_PIN = 7;
 const uint8_t DATA_PIN = 8;
+
 const uint8_t LM35_PIN = A4;
 
 class MultiFunctionShield

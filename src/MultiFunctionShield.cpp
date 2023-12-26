@@ -26,14 +26,27 @@ MultiFunctionShield::MultiFunctionShield(void) // constructor
 
 void MultiFunctionShield::begin(void)
 {
+  pinMode(LED_1_PIN, OUTPUT);
+  pinMode(LED_2_PIN, OUTPUT);
+  pinMode(LED_3_PIN, OUTPUT);
+  pinMode(LED_4_PIN, OUTPUT);
+
+  pinMode(POT_PIN, INPUT);
+
   digitalWrite(BUZZER_PIN, HIGH); // first! else short sound
   pinMode(BUZZER_PIN, OUTPUT);
+
+  pinMode(BUTTON_1_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_2_PIN, INPUT_PULLUP);
+  pinMode(BUTTON_3_PIN, INPUT_PULLUP);
 
   pinMode(LATCH_PIN, OUTPUT);
   pinMode(CLK_PIN, OUTPUT);
   pinMode(DATA_PIN, OUTPUT);
 
-  TCCR1A = 0;                                         // Register loeschen
+  pinMode(LM35_PIN, INPUT);
+
+   TCCR1A = 0;                                         // Register loeschen
   OCR1A = 1000;                                       // Vergleichswert x = (CPU / (2 x Teiler x f)) - 1
   TCCR1B |= (1 << CS10) | (1 << CS11) | (1 << WGM12); // CTC-Mode, Teiler = 64
   TIMSK1 |= (1 << OCIE1A);                            // Output Compare A Match Interrupt Enable
